@@ -11,10 +11,13 @@ class Controller {
         this.player = player;
 
         this.autoHideTimer = 0;
+        this.setAutoHideHandler = this.setAutoHide.bind(this);
         if (!utils.isMobile) {
-            this.setAutoHideHandler = this.setAutoHide.bind(this);
             this.player.container.addEventListener('mousemove', this.setAutoHideHandler);
             this.player.container.addEventListener('click', this.setAutoHideHandler);
+            this.player.on('play', this.setAutoHideHandler);
+            this.player.on('pause', this.setAutoHideHandler);
+        } else {
             this.player.on('play', this.setAutoHideHandler);
             this.player.on('pause', this.setAutoHideHandler);
         }

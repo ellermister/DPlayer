@@ -6,6 +6,11 @@
     bottom: 0;
     font-size: 22px;
     color: #fff;
+
+    // 定义动画名称变量 修复动画名称被增加引号导致无法正确定位
+    --danmaku-animation: danmaku;
+    --danmaku-center-animation: danmaku-center;
+
     .dplayer-danmaku-item {
         display: inline-block;
         pointer-events: none;
@@ -24,7 +29,7 @@
         transform: translateX(100%);
         &.dplayer-danmaku-move {
             will-change: transform;
-            animation-name: danmaku;
+            animation-name: var(--danmaku-animation);
             animation-timing-function: linear;
             animation-play-state: paused;
         }
@@ -42,7 +47,7 @@
         visibility: hidden;
         &.dplayer-danmaku-move {
             will-change: visibility;
-            animation-name: danmaku-center;
+            animation-name: var(--danmaku-center-animation);
             animation-timing-function: linear;
             animation-play-state: paused;
         }

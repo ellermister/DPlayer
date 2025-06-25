@@ -192,21 +192,21 @@ const dp = new DPlayer({
 
 ## API
 
--   `dp.play()`: play video
+- `dp.play()`: play video
 
--   `dp.pause()`: pause video
+- `dp.pause()`: pause video
 
--   `dp.seek(time: number)`: seek to specified time
+- `dp.seek(time: number)`: seek to specified time
 
     ```js
     dp.seek(100);
     ```
 
--   `dp.toggle()`: toggle between play and pause
+- `dp.toggle()`: toggle between play and pause
 
--   `dp.on(event: string, handler: function)`: bind video and player events, [see more details](https://dplayer.diygod.dev/guide.html#event-binding)
+- `dp.on(event: string, handler: function)`: bind video and player events, [see more details](https://dplayer.diygod.dev/guide.html#event-binding)
 
--   `dp.switchVideo(video, danmaku)`: switch to a new video
+- `dp.switchVideo(video, danmaku)`: switch to a new video
 
     ```js
     dp.switchVideo(
@@ -224,37 +224,37 @@ const dp = new DPlayer({
     );
     ```
 
--   `dp.notice(text: string, time: number, opacity: number)`: show message, the unit of time is millisecond, the default of time is 2000, the default of opacity is 0.8
+- `dp.notice(text: string, time: number, opacity: number)`: show message, the unit of time is millisecond, the default of time is 2000, the default of opacity is 0.8
 
     ```js
     dp.notice('Amazing player', 2000, 0.8);
     ```
 
--   `dp.switchQuality(index: number)`: switch quality
+- `dp.switchQuality(index: number)`: switch quality
 
--   `dp.destroy()`: destroy player
+- `dp.destroy()`: destroy player
 
--   `dp.speed(rate: number)`: set video speed
+- `dp.speed(rate: number)`: set video speed
 
--   `dp.volume(percentage: number, nostorage: boolean, nonotice: boolean)`: set video volume
+- `dp.volume(percentage: number, nostorage: boolean, nonotice: boolean)`: set video volume
 
     ```js
     dp.volume(0.1, true, false);
     ```
 
--   `dp.video`: native video
+- `dp.video`: native video
 
--   `dp.video.currentTime`: returns the current playback position
+- `dp.video.currentTime`: returns the current playback position
 
--   `dp.video.duration`: returns video total time
+- `dp.video.duration`: returns video total time
 
--   `dp.video.paused`: returns whether the video paused
+- `dp.video.paused`: returns whether the video paused
 
--   most [native api](http://www.w3schools.com/tags/ref_av_dom.asp) are supported
+- most [native api](http://www.w3schools.com/tags/ref_av_dom.asp) are supported
 
--   `dp.danmaku`
+- `dp.danmaku`
 
--   `dp.danmaku.send(danmaku, callback: function)`: submit a new danmaku to back end
+- `dp.danmaku.send(danmaku, callback: function)`: submit a new danmaku to back end
 
     ```js
     dp.danmaku.send(
@@ -269,7 +269,7 @@ const dp = new DPlayer({
     );
     ```
 
--   `dp.danmaku.draw(danmaku)`: draw a new danmaku to player in real time
+- `dp.danmaku.draw(danmaku)`: draw a new danmaku to player in real time
 
     ```js
     dp.danmaku.draw({
@@ -279,27 +279,27 @@ const dp = new DPlayer({
     });
     ```
 
--   `dp.danmaku.opacity(percentage: number)`: set danmaku opacity, opacity should between 0 and 1
+- `dp.danmaku.opacity(percentage: number)`: set danmaku opacity, opacity should between 0 and 1
 
     ```js
     dp.danmaku.opacity(0.5);
     ```
 
--   `dp.danmaku.clear()`: clear all danmakus
+- `dp.danmaku.clear()`: clear all danmakus
 
--   `dp.danmaku.hide()`: hide danmaku
+- `dp.danmaku.hide()`: hide danmaku
 
--   `dp.danmaku.show()`: show danmaku
+- `dp.danmaku.show()`: show danmaku
 
--   `dp.fullScreen`: two type: `web` or `browser`, the default one is `browser`
+- `dp.fullScreen`: two type: `web` or `browser`, the default one is `browser`
 
--   `dp.fullScreen.request(type: string)`: request fullscreen
+- `dp.fullScreen.request(type: string)`: request fullscreen
 
     ```js
     dp.fullScreen.request('web');
     ```
 
--   `dp.fullScreen.cancel(type: string)`: cancel fullscreen
+- `dp.fullScreen.cancel(type: string)`: cancel fullscreen
 
     ```js
     dp.fullScreen.cancel('web');
@@ -317,56 +317,57 @@ dp.on('ended', function () {
 
 Video events
 
--   abort
--   canplay
--   canplaythrough
--   durationchange
--   emptied
--   ended
--   error
--   loadeddata
--   loadedmetadata
--   loadstart
--   mozaudioavailable
--   pause
--   play
--   playing
--   progress
--   ratechange
--   seeked
--   seeking
--   stalled
--   suspend
--   timeupdate
--   volumechange
--   waiting
+- abort
+- canplay
+- canplaythrough
+- durationchange
+- emptied
+- ended
+- error
+- loadeddata
+- loadedmetadata
+- loadstart
+- mozaudioavailable
+- pause
+- play
+- playing
+- progress
+- ratechange
+- seeked
+- seeking
+- stalled
+- suspend
+- timeupdate
+- volumechange
+- waiting
 
 Player events
 
--   screenshot
--   thumbnails_show
--   thumbnails_hide
--   danmaku_show
--   danmaku_hide
--   danmaku_clear
--   danmaku_loaded
--   danmaku_send
--   danmaku_opacity
--   contextmenu_show
--   contextmenu_hide
--   notice_show
--   notice_hide
--   quality_start
--   quality_end
--   destroy
--   resize
--   fullscreen
--   fullscreen_cancel
--   webfullscreen
--   webfullscreen_cancel
--   subtitle_show
--   subtitle_hide
--   subtitle_change
+- screenshot
+- thumbnails_show
+- thumbnails_hide
+- danmaku_show
+- danmaku_hide
+- danmaku_clear
+- danmaku_load_start
+- danmaku_load_end
+- danmaku_send
+- danmaku_opacity
+- contextmenu_show
+- contextmenu_hide
+- notice_show
+- notice_hide
+- quality_start
+- quality_end
+- destroy
+- resize
+- fullscreen
+- fullscreen_cancel
+- webfullscreen
+- webfullscreen_cancel
+- subtitle_show
+- subtitle_hide
+- subtitle_change
 
 ## Quality switching
 

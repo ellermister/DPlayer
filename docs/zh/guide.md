@@ -182,21 +182,21 @@ const dp = new DPlayer({
 
 ## API
 
--   `dp.play()`: 播放视频
+- `dp.play()`: 播放视频
 
--   `dp.pause()`: 暂停视频
+- `dp.pause()`: 暂停视频
 
--   `dp.seek(time: number)`: 跳转到特定时间
+- `dp.seek(time: number)`: 跳转到特定时间
 
     ```js
     dp.seek(100);
     ```
 
--   `dp.toggle()`: 切换播放和暂停
+- `dp.toggle()`: 切换播放和暂停
 
--   `dp.on(event: string, handler: function)`: 绑定视频和播放器事件，见[#事件绑定](#事件绑定)
+- `dp.on(event: string, handler: function)`: 绑定视频和播放器事件，见[#事件绑定](#事件绑定)
 
--   `dp.switchVideo(video, danmaku)`: 切换到其他视频
+- `dp.switchVideo(video, danmaku)`: 切换到其他视频
 
     ```js
     dp.switchVideo(
@@ -214,33 +214,33 @@ const dp = new DPlayer({
     );
     ```
 
--   `dp.notice(text: string, time: number)`: 显示通知，时间的单位为毫秒，默认时间 2000 毫秒，默认透明度 0.8
+- `dp.notice(text: string, time: number)`: 显示通知，时间的单位为毫秒，默认时间 2000 毫秒，默认透明度 0.8
 
--   `dp.switchQuality(index: number)`: 切换清晰度
+- `dp.switchQuality(index: number)`: 切换清晰度
 
--   `dp.destroy()`: 销毁播放器
+- `dp.destroy()`: 销毁播放器
 
--   `dp.speed(rate: number)`: 设置视频速度
+- `dp.speed(rate: number)`: 设置视频速度
 
--   `dp.volume(percentage: number, nostorage: boolean, nonotice: boolean)`: 设置视频音量
+- `dp.volume(percentage: number, nostorage: boolean, nonotice: boolean)`: 设置视频音量
 
     ```js
     dp.volume(0.1, true, false);
     ```
 
--   `dp.video`: 原生 video
+- `dp.video`: 原生 video
 
--   `dp.video.currentTime`: 返回视频当前播放时间
+- `dp.video.currentTime`: 返回视频当前播放时间
 
--   `dp.video.duration`: 返回视频总时间
+- `dp.video.duration`: 返回视频总时间
 
--   `dp.video.paused`: 返回视频是否暂停
+- `dp.video.paused`: 返回视频是否暂停
 
--   支持大多数[原生 video 接口](http://www.w3schools.com/tags/ref_av_dom.asp)
+- 支持大多数[原生 video 接口](http://www.w3schools.com/tags/ref_av_dom.asp)
 
--   `dp.danmaku`
+- `dp.danmaku`
 
--   `dp.danmaku.send(danmaku, callback: function)`: 提交一个新弹幕
+- `dp.danmaku.send(danmaku, callback: function)`: 提交一个新弹幕
 
     ```js
     dp.danmaku.send(
@@ -255,7 +255,7 @@ const dp = new DPlayer({
     );
     ```
 
--   `dp.danmaku.draw(danmaku)`: 实时绘制一个新弹幕
+- `dp.danmaku.draw(danmaku)`: 实时绘制一个新弹幕
 
     ```js
     dp.danmaku.draw({
@@ -265,27 +265,27 @@ const dp = new DPlayer({
     });
     ```
 
--   `dp.danmaku.opacity(percentage: number)`: 设置弹幕透明度，透明度值在 0 到 1 之间
+- `dp.danmaku.opacity(percentage: number)`: 设置弹幕透明度，透明度值在 0 到 1 之间
 
     ```js
     dp.danmaku.opacity(0.5);
     ```
 
--   `dp.danmaku.clear()`: 清除所有弹幕
+- `dp.danmaku.clear()`: 清除所有弹幕
 
--   `dp.danmaku.hide()`: 隐藏弹幕
+- `dp.danmaku.hide()`: 隐藏弹幕
 
--   `dp.danmaku.show()`: 显示弹幕
+- `dp.danmaku.show()`: 显示弹幕
 
--   `dp.fullScreen`: 两个类型：`web` 和 `browser`，默认类型是 `browser`
+- `dp.fullScreen`: 两个类型：`web` 和 `browser`，默认类型是 `browser`
 
--   `dp.fullScreen.request(type: string)`: 进入全屏
+- `dp.fullScreen.request(type: string)`: 进入全屏
 
     ```js
     dp.fullScreen.request('web');
     ```
 
--   `dp.fullScreen.cancel(type: string)`: 退出全屏
+- `dp.fullScreen.cancel(type: string)`: 退出全屏
 
     ```js
     dp.fullScreen.cancel('web');
@@ -303,54 +303,55 @@ dp.on('ended', function () {
 
 视频事件
 
--   abort
--   canplay
--   canplaythrough
--   durationchange
--   emptied
--   ended
--   error
--   loadeddata
--   loadedmetadata
--   loadstart
--   mozaudioavailable
--   pause
--   play
--   playing
--   progress
--   ratechange
--   seeked
--   seeking
--   stalled
--   suspend
--   timeupdate
--   volumechange
--   waiting
+- abort
+- canplay
+- canplaythrough
+- durationchange
+- emptied
+- ended
+- error
+- loadeddata
+- loadedmetadata
+- loadstart
+- mozaudioavailable
+- pause
+- play
+- playing
+- progress
+- ratechange
+- seeked
+- seeking
+- stalled
+- suspend
+- timeupdate
+- volumechange
+- waiting
 
 播放器事件
 
--   screenshot
--   thumbnails_show
--   thumbnails_hide
--   danmaku_show
--   danmaku_hide
--   danmaku_clear
--   danmaku_loaded
--   danmaku_send
--   danmaku_opacity
--   contextmenu_show
--   contextmenu_hide
--   notice_show
--   notice_hide
--   quality_start
--   quality_end
--   destroy
--   resize
--   fullscreen
--   fullscreen_cancel
--   subtitle_show
--   subtitle_hide
--   subtitle_change
+- screenshot
+- thumbnails_show
+- thumbnails_hide
+- danmaku_show
+- danmaku_hide
+- danmaku_clear
+- danmaku_load_start
+- danmaku_load_end
+- danmaku_send
+- danmaku_opacity
+- contextmenu_show
+- contextmenu_hide
+- notice_show
+- notice_hide
+- quality_start
+- quality_end
+- destroy
+- resize
+- fullscreen
+- fullscreen_cancel
+- subtitle_show
+- subtitle_hide
+- subtitle_change
 
 ## 清晰度切换
 
